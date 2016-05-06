@@ -1,2 +1,2 @@
 # Calculator
-My first repository on GitHub
+This is a simple calculator built in vanilla JavaScript.
