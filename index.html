@@ -1,0 +1,171 @@
+<html>
+<head>
+    <title>My Calculator</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+    	#calculator	{
+    		background-color: gray;
+    		width:500px;
+    		height: 600px;
+    		margin:0 auto;
+    		padding: 1px;
+    		border-radius: 2%;
+    	}
+
+
+    	#top-row	{
+    		margin:0;
+    	}
+
+    	#second-row	{
+    		clear: both;
+    	}
+
+    	#clear	{
+    		background-color: red;
+    		width: 75px;
+    		height: 75px;
+    		float: left;
+    		margin-left: 25px;
+    		margin-top: 22px;
+    	}
+
+    	#display	{
+    		position: relative;
+    		background-color: black;
+    		width:345px;
+    		height: 75px;
+    		margin-top:20px;
+    		margin-right:20px;
+    		color:white;
+    		font-size: 50px;
+    		float: right;
+    	}
+
+    	#equals	{
+    		background-color: black;
+    		width: 210px;
+    		height:85px;
+    		float: left;
+    		margin:20px;
+    		border-radius: 3%;
+    	}
+
+    	.number	{
+    		background-color: black;
+    		width: 85px;
+    		height:85px;
+    		float: left;
+    		margin:20px;
+    	}
+
+    	.op	{
+    		background-color: black;
+    		width: 85px;
+    		height: 85px;
+    		float: left;
+    		margin:20px;
+    	}
+
+    	button	{
+    		color:white;
+    		font-size: 40px;
+    		border-radius: 10%;
+    		border:5px 5px 0 0 solid white;
+    	}
+
+    	button:active	{
+    		background-color:#292323;
+    	}
+
+    	button:focus	{
+    		outline:0;
+    	}
+
+    	input[type=number]::-webkit-inner-spin-button, 
+		input[type=number]::-webkit-outer-spin-button { 
+ 		-webkit-appearance: none; 
+  		margin: 0; 
+		}
+
+		#decimal {
+			font-size: 50px;
+			color: white;
+		}
+    </style>
+
+</head>
+
+<body>
+
+	<div id="container">
+		<div id="calculator">
+			<div id="top-row">
+				<button id="clear" onclick="clearMemory()" value="">
+					C
+				</button>
+				<input id="display" type="number" maxlength="6">
+				</input>
+			</div>
+			<div id="second-row">
+				<button id="seven" onclick="handleNumberClick(7)" value="7" class="number">
+					7
+				</button>
+				<button id="eight" onclick="handleNumberClick(8)" value="8" class="number">
+					8
+				</button>
+				<button id="nine" onclick="handleNumberClick(9)" value="9" class="number">
+					9
+				</button>
+				<button id="plus" onclick="handleOperationClick('add')" value="+" class="op">
+					+
+				</button>
+			</div>
+			<div id="third-row">
+				<button id="four" onclick="handleNumberClick(4)" value="4" class="number">
+					4
+				</button>
+				<button id="five" onclick="handleNumberClick(5)" value="5" class="number">
+					5
+				</button>
+				<button id="six" onclick="handleNumberClick(6)" value="6" class="number">
+					6
+				</button>
+				<button id="minus" onclick="handleOperationClick('subtract')" value="-" class="op">
+					-
+				</button>
+			</div>
+			<div id="fourth-row">
+				<button id="one" onclick="handleNumberClick(1)" value="1" class="number">
+					1
+				</button>
+				<button id="two" onclick="handleNumberClick(2)" value="2" class="number">
+					2
+				</button>
+				<button id="three" onclick="handleNumberClick(3)" value="3" class="number">
+					3
+				</button>
+				<button id="divide" onclick="handleOperationClick('division')" value="/" class="op">
+					/
+				</button>
+			</div>
+			<div id="fifth-row">
+				<button id="zero" onclick="handleNumberClick(0)" value="0" class="number">
+					0
+				</button>
+				<button id="equals" onclick="handleOperationClick('evaluate')" value="=" >
+					=
+				</button>
+				<button id="multiply" onclick="handleOperationClick('multiplication')" value="x" class="op">
+					x
+				</button>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
